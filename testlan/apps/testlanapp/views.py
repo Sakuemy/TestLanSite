@@ -1,4 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
+from .models import PointData, CheckLog
 
 def index(request):
-    return HttpResponse("Привет мир!")
+    list_PointData = PointData.objects.order_by('id')
+    return render(request, 'testlanapp/list.html', {'list_PointData': list_PointData})

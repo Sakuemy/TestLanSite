@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+	{% if list_PointData %}
+		{% for a in list_PointData %}
+			<a href='#'>{{a.PointData_Name}}</a><br>
+		{% endfor %}
+	{% else %}
+		Данные не обнаружены! Добавте данные через администрирование.
+	{% endif %}
+
+{% endblock %}

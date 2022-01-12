@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import PointData, Alert
+
+admin.site.register(PointData)
+admin.site.register(Alert)
